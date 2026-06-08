@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApplicationPackage
+  SchemaVersion="1.0"
+  AutodeskProduct="AutoCAD"
+  ProductType="Application"
+  Name="CAD Subscription Tools"
+  AppVersion="1.0.0"
+  Description="Licensed AutoLISP productivity tools for AutoCAD users."
+  Author="Your Company"
+  ProductCode="{B66C8853-5A1E-4C8F-8614-3D7642CC4A23}"
+  UpgradeCode="{E4BB0B9B-7E4E-4D8D-A89C-0C9F55201531}">
+  <CompanyDetails
+    Name="Your Company"
+    Url="https://your-domain.example"
+    Email="support@your-domain.example" />
+  <Components Description="CAD Subscription Tools AutoLISP loader">
+    <RuntimeRequirements OS="Win64" Platform="AutoCAD*" SeriesMin="R20.0" />
+    <ComponentEntry
+      AppName="CADSubscriptionTools"
+      Version="1.0.0"
+      ModuleName="./Contents/CPT_Loader.lsp"
+      AppDescription="Loads approved CAD Subscription Tools LISP commands."
+      LoadOnAutoCADStartup="True"
+      LoadOnAppearance="True"
+      PerDocument="True" />
+  </Components>
+</ApplicationPackage>
