@@ -1,6 +1,32 @@
+
 # AutoCad_Lisps_Prod_Env
 
 ## CAD Plugin Subscription Platform
+How To Execute
+
+On Windows:
+
+cd C:\Path\To\cad-plugin-subscription-platform
+.\build-installer.ps1
+That creates:
+
+pendrive\CADSubscriptionTools_Setup.exe
+Copy the full pendrive folder to your USB drive, not only the EXE, because the EXE reads the current Payload folder so you can add/modify/delete LISP files on the pendrive.
+
+For immediate testing before building the EXE, run this on the customer Windows computer:
+
+pendrive\install-from-pendrive.bat
+Then open AutoCAD and run:
+
+CPTACTIVATE
+CPTABOUT
+CPTHELLO
+To add/remove LISP files:
+
+.\admin\Add-LispTool.ps1 -SourceLisp "C:\MyLisps\tool.lsp"
+.\admin\Remove-LispTool.ps1 -ToolName "tool.lsp"
+
+
 
 A Windows installer scaffold for distributing licensed AutoLISP tools to AutoCAD users.
 
